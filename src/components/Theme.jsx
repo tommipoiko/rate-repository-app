@@ -4,7 +4,8 @@ const theme = {
     secondary: '#586069',
     white: '#FFFFFF',
     gray: '#e1e4e8',
-    languageTag: '#0366d6'
+    languageTag: '#0366d6',
+    errorColor: '#d73a4a'
   },
   fontSizes: {
     body: 14,
