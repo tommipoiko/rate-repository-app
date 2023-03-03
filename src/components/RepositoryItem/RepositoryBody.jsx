@@ -4,7 +4,8 @@ import theme from '../Theme';
 const styles = StyleSheet.create({
   containerCol: {
     display: 'flex',
-    flexDirection: "column"
+    flexDirection: "column",
+    flexShrink: 1
   },
   textHeader: {
     fontWeight: theme.fontWeights.bold,
@@ -18,7 +19,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginLeft: 15,
     font: theme.fonts.main,
-    fontSize: theme.fontSizes.normal
+    fontSize: theme.fontSizes.normal,
+    flexShrink: 1
   },
   textLanguage: {
     fontWeight: theme.fontWeights.normal,

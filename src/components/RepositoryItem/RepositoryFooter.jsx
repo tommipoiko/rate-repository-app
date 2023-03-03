@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
     font: theme.fonts.main,
     fontSize: theme.fontSizes.normal
+  },
+  text: {
+    font: theme.fonts.main
   }
 });
 
@@ -38,19 +41,19 @@ const RepositoryFooter = ({repo}) => {
     <View style={styles.containerRow}>
       <View style={styles.containerCol}>
         <Text style={styles.textHeader}>{stars}</Text>
-        <Text>Stars</Text>
+        <Text style={styles.text}>Stars</Text>
       </View>
       <View style={styles.containerCol}>
         <Text style={styles.textHeader}>{forks}</Text>
-        <Text>Forks</Text>
+        <Text style={styles.text}>Forks</Text>
       </View>
       <View style={styles.containerCol}>
         <Text style={styles.textHeader}>{reviews}</Text>
-        <Text>Reviews</Text>
+        <Text style={styles.text}>Reviews</Text>
       </View>
       <View style={styles.containerCol}>
         <Text style={styles.textHeader}>{ratings}</Text>
-        <Text>Rating</Text>
+        <Text style={styles.text}>Rating</Text>
       </View>
     </View>
   )
