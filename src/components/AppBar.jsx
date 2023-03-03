@@ -1,34 +1,36 @@
-import { View, StyleSheet, Pressable, Text } from 'react-native';
+import { View, StyleSheet, Text, ScrollView } from 'react-native';
 import Constants from 'expo-constants';
 import theme from './Theme';
+import { Link } from 'react-router-native';
 
 const styles = StyleSheet.create({
   flexContainer: {
     flexDirection: 'row',
-    paddingStart: 10,
-    paddingEnd: 10,
-    paddingTop: Constants.statusBarHeight,
-    paddingBottom: 20,
-    backgroundColor: theme.colors.primary
+    paddingTop: Constants.statusBarHeight / 2,
+    backgroundColor: theme.colors.primary,
+    justifyContent: 'space-evenly'
   },
   text: {
     color: theme.colors.white,
     font: theme.fonts.main,
     fontSize: theme.fontSizes.subheading,
-    fontWeight: theme.fontWeights.bold
+    fontWeight: theme.fontWeights.bold,
+    paddingBottom: 10,
+    paddingHorizontal: 15
   }
 });
-
-const repositoriesOnPress = () => {
-  console.log("Pressed Repositories")
-};
 
 const AppBar = () => {
   return (
     <View style={styles.flexContainer}>
-      <Pressable onPress={repositoriesOnPress}>
-        <Text style={styles.text}>Repositories</Text>
-      </Pressable>
+      <ScrollView horizontal>
+        <Link to="/">
+          <Text style={styles.text}>Repositories</Text>
+        </Link>
+        <Link to="/SignIn">
+          <Text style={styles.text}>Sign In</Text>
+        </Link>
+      </ScrollView>
     </View>
   );
 };
