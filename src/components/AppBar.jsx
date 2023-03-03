@@ -7,8 +7,7 @@ const styles = StyleSheet.create({
   flexContainer: {
     flexDirection: 'row',
     paddingTop: Constants.statusBarHeight / 2,
-    backgroundColor: theme.colors.primary,
-    justifyContent: 'space-evenly'
+    backgroundColor: theme.colors.primary
   },
   text: {
     color: theme.colors.white,
@@ -16,7 +15,7 @@ const styles = StyleSheet.create({
     fontSize: theme.fontSizes.subheading,
     fontWeight: theme.fontWeights.bold,
     paddingBottom: 10,
-    paddingHorizontal: 15
+    paddingHorizontal: 10
   }
 });
 
