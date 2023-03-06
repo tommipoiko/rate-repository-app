@@ -30,3 +30,12 @@ export const ALL_REPOSITORIES = gql`
     }
   }
 `
+
+export const WHOAMI = gql`
+  query Query {
+    me {
+      username
+      id
+    }
+  }
+`
