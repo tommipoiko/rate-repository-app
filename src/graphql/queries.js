@@ -39,3 +39,20 @@ export const WHOAMI = gql`
     }
   }
 `
+
+export const GET_REPOSITORY = gql`
+  query ($repositoryId: ID!) {
+    repository(id: $repositoryId) {
+      id
+      fullName
+      url
+      ownerAvatarUrl
+      description
+      forksCount
+      language
+      stargazersCount
+      ratingAverage
+      reviewCount
+    }
+  }
+`
