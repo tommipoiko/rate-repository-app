@@ -70,7 +70,9 @@ const AppBar = () => {
     <View style={styles.container}>
       <ScrollView style={styles.scrollView} horizontal>
         <AppBarTab to="/">Repositories</AppBarTab>
+        { me ? <AppBarTab to="/createReview">Create a review</AppBarTab> : null }
         { me ? <SignOutButton /> : <AppBarTab to="/sign-in">Sign in</AppBarTab> }
+        { !me ? <AppBarTab to="/sign-up">Sign up</AppBarTab> : null }
       </ScrollView>
     </View>
   );
