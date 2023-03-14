@@ -70,3 +70,22 @@ export const GET_REPOSITORY = gql`
     }
   }
 `
+
+export const MY_REVIEWS = gql`
+  query {
+    me {
+      reviews {
+        edges {
+          node {
+            createdAt
+            rating
+            text
+            repository {
+              fullName
+            }
+          }
+        }
+      }
+    }
+  }
+`
